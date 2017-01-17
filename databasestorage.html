@@ -1,0 +1,35 @@
+<style>
+input[type="radio"]{
+	margin:30px 0px 5px 20px;
+}
+
+.categoryLabel {
+    margin-left: 50px;
+    color: #360;
+    padding: 5px 0px 0px 0px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+</style>
+<div ng-controller="DatabaseStorageController">
+	<div class="categoryLabel">MVC Service Method Test Page</div></br>
+	<div class="categoryLabel">
+		MVC Service Method(URL) : <input type="text" ng-model="url" style="width:500px" class="textFont10">
+		 <br>
+		  <input type="radio" ng-model="httpMethod" name="httpMethod" value="get" > Get
+		 
+		  <input type="radio" ng-model="httpMethod" name="httpMethod" value="post"> Post
+		
+		  <input type="radio" ng-model="httpMethod" name="httpMethod" value="put" > Put
+		
+		  <input type="radio" ng-model="httpMethod" name="httpMethod" value="delete"> Delete
+		  <div>
+		   <br> <br>
+		  Enter Input Parameters: <textarea rows='10' style="width:800px"  name="input" ng-model="inputParam"></textarea>
+		   <br><br>
+		  Output Data : <br><textarea rows='20' style="width:800px" json-text name="output" ng-model="responseText"></textarea>
+		   </div>
+		   <br><br><br>
+		  <input type="submit" value="Call Http method" ng-click="callStorageMethod()" style="margin-bottom: 30px;" class=" btn checkout">
+	</div>
+</div>
